@@ -1,3 +1,11 @@
+# XState React
+
+This is a quick example of using XState with React to fetch Reddit articles. See here for the walkthrough by [David K](https://github.com/davidkpiano): https://xstate.js.org/docs/tutorials/reddit.html.
+
+Below is the standard CRA readme.
+
+-------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
