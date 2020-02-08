@@ -35,7 +35,7 @@ export const Subreddit = ({ service }) => {
 					</header>
 					<ul>
 						{posts.map(post => {
-							return <li key={post.id}>{post.title}</li>
+							return <li key={post.id}><a href={post.url}>{post.title}</a></li>
 						})}
 					</ul>
 				</>

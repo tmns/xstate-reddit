@@ -1,7 +1,8 @@
 import './styles.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { useMachine } from './redditMachine';
+import { useMachine } from '@xstate/react';
+import { redditMachine } from './redditMachine';
 import { Subreddit } from './Subreddit';
 
 const subreddits = ['frontend', 'reactjs', 'vuejs'];
@@ -35,6 +36,6 @@ const App = () => {
 	);
 };
 
-const rootElement = document.getElementById('root';)
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
 

@@ -3,6 +3,7 @@ import { createSubredditMachine } from './subredditMachine';
 
 export const redditMachine = Machine({
 	id: 'reddit',
+	initial: 'idle',
 	context: {
 		subreddits: {},
 		subreddit: null
