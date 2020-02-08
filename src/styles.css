@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin state {
+  &[data-state]:not([data-state=""]):before {
+    content: attr(data-machine) ' state: ' attr(data-state);
+    display: inline-block;
+    padding: .5rem;
+    font-size: 75%;
+    font-weight: bold;
+    font-family: monospace;
+    color: white;
+    background: black;
+    opacity: 0.6;
+    border-radius: .5rem;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  @include state;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+section {
+  @include state;
+  padding: 1rem;
+  border: 1px solid #ededed;
+  box-shadow: 0 1rem 1rem rgba(black, 0.1);
+  transition: opacity .3s;
+
+  > header {
+    margin-bottom: 1rem;
+  }
+
+  &[data-state~="loading"] * {
+    opacity: 0.5;
+  }
+}
+
+small {
+  color: #aaa;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  line-height: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
